@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+		"firewall_ip_address": {
+		  "value": "172.28.29.36",
+		},
+	    "core_subnet_cidr_internodo": {
+          "value": "10.25.228.128/26"
+        },
+	    "core_subnet_name_internodo": {
+          "value": "core_subnet_internodo"
+        },	
+		
+	    "core_subnet_cidr_servicio": {
+          "value": "172.16.128.0/20"
+        },	
+	    "core_subnet_name_servicio": {
+          "value": "core_subnet_servicio"
+        },	
+		
+	    "core_subnet_cidr_gestion": {
+          "value": "10.26.224.0/23"
+        },
+		"core_subnet_name_gestion": {
+          "value": "core_subnet_gestion"
+        },
+		
+	    "core_subnet_cidr_untrusted_vpns": {
+          "value": "172.28.29.32/27"
+        },
+		"core_subnet_name_untrusted_vpns": {
+          "value": "core_subnet_untrusted_vpns"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualNetworkExistingRGName": {"value": "gvp_vnet_core"},
+        "virtualNetworkAddressPrefix":  {"value": "172.28.29.32/27"},
+        "vnetNewOrExisting": 			{"value": "existing"},
+        "Subnet1Prefix": 				{"value": "172.28.29.32/27"},
+        "Subnet1Name": 					{"value": "core_subnet_untrusted_vpns"},
+        "Subnet2Prefix": 				{"value": "10.26.224.0/23"},
+        "Subnet2Name": 					{"value": "core_subnet_gestion"},
+		"routeTable1Name": 				{"value": "RouteTable1"},
+		"routeTable2Name": 				{"value": "RouteTable2"},
+        "adminUsername": 				{"value": "sergio"},
+        "sshPublicKey": 				{"value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKlMlDqCEYmtD3NzHTzQXcu9Oj3U+CKYCU4D+kwEN5BuKs5J9lPFA9B2MsK9MYsyXoG4Gkt3ENHyzY+dgCN3eLdyiyOAtpHKddqO+5CG3mZoTlONTSofZm2pbnCoWh8UdKlBUvD467gFbw+HcBnXXY89zhdBIkhjQELcuZc0je8XsYrw++9DEJW9GBlREE8E/RustYlF5/MsNHvIxZqKNhBocX4Cj/nUdV+aGxTMa4pEnFi8gDA8xuYK9mDA/GNFd47TMa6kd+YLlojlfzp1GGDiwDK1px1TpjjzXan/dMMFbCsL5dgpuFul34U0yOdg7iEgoAUUwTGvHQsMyIl+BJ sergio@MININT-SCP2P2V"},
+        "storageAccountExistingRG": 	{"value": "String"},
+        "publicIPAddressName": 			{"value": "String"},
+		"publicIPExistingRGName": 		{"value": "String"},
+        "adminPassword": 				{"value": "String"}		
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+	    "vnet_name": {
+            "type": "String"
+        },
+		
+	    "core_subnet_cidr_internodo":      {"type": "String"},
+	    "core_subnet_name_internodo":      {"type": "String"},			
+	    "core_subnet_cidr_servicio":       {"type": "String"},			
+	    "core_subnet_name_servicio":       {"type": "String"},			
+	    "core_subnet_cidr_gestion":        {"type": "String"},			
+	    "core_subnet_name_gestion":        {"type": "String"},
+	    "core_subnet_cidr_untrusted_vpns": {"type": "String"},
+	    "core_subnet_name_untrusted_vpns": {"type": "String"},
+		"firewall_ip_address":             {"type": "String"}
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[parameters('vnet_name')]",
+            "apiVersion": "2018-02-01",
+            "location": "[resourceGroup().location]",
+			"tags": {
+				"networkType": "core"
+			},
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[parameters('core_subnet_cidr_internodo')]",
+                        "[parameters('core_subnet_cidr_servicio')]",						
+                        "[parameters('core_subnet_cidr_gestion')]",
+                        "[parameters('core_subnet_cidr_untrusted_vpns')]"			
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[parameters('core_subnet_name_internodo')]",
+                        "properties": {
+                            "addressPrefix": "[parameters('core_subnet_cidr_internodo')]"
+                        }
+                    },
+                    {
+                        "name": "[parameters('core_subnet_name_servicio')]",
+                        "properties": {
+                            "addressPrefix": "[parameters('core_subnet_cidr_servicio')]"
+                        }
+                    },
+                    {
+                        "name": "[parameters('core_subnet_name_gestion')]",
+                        "properties": {
+                            "addressPrefix": "[parameters('core_subnet_cidr_gestion')]"
+                        }
+                    },
+                    {
+                        "name": "[parameters('core_subnet_name_untrusted_vpns')]",
+                        "properties": {
+                            "addressPrefix": "[parameters('core_subnet_cidr_untrusted_vpns')]"
+                        }
+                    }
+                ],
+                "virtualNetworkPeerings": [],
+                "enableDdosProtection": false,
+                "enableVmProtection": false
+            },
+            "dependsOn": []
+        }
+    ]
+}

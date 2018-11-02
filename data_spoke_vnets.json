@@ -1,0 +1,78 @@
+{
+    
+	"regular_spoke_vnets": [
+		{
+			"vnet_name": "ar_be",
+			"vnet_cidr": "172.28.28.128/28",
+			"GatewaySubnet_cidr":  "172.28.28.128/28"
+		},
+		{
+			"vnet_name": "cl_be",
+			"vnet_cidr": "172.28.28.144/28",
+			"GatewaySubnet_cidr":  "172.28.28.144/28"
+		},
+		{
+			"vnet_name": "co_be",
+			"vnet_cidr": "172.28.28.160/28",
+			"GatewaySubnet_cidr":  "172.28.28.160/28"
+		},
+		{
+			"vnet_name": "br_be",
+			"vnet_cidr": "172.28.28.176/28",
+			"GatewaySubnet_cidr":  "172.28.28.176/28"
+		},
+		
+		{
+			"vnet_name": "oam_iptv",
+			"vnet_cidr": "172.28.28.192/28",
+			"GatewaySubnet_cidr":  "172.28.28.192/28"
+		},
+		{
+			"vnet_name": "oam_internodo",
+			"vnet_cidr": "172.28.28.208/28",
+			"GatewaySubnet_cidr":  "172.28.28.208/28"
+		},
+		{
+			"vnet_name": "internodo",
+			"vnet_cidr": "172.28.28.224/28",
+			"GatewaySubnet_cidr":  "172.28.28.224/28"
+		},
+		{
+			"vnet_name": "intragvp",
+			"vnet_cidr": "172.28.28.240/28",
+			"GatewaySubnet_cidr":  "172.28.28.240/28"
+		},
+		{
+			"vnet_name": "sync_db",
+			"vnet_cidr": "172.28.29.0/28",
+			"GatewaySubnet_cidr":  "172.28.29.0/28"
+		}
+	],
+	
+	"nat_spoke_vnets": [
+		{
+			"vnet_name": "ar_servicio_nat",
+			"vnet_cidr": "172.28.28.0/27",
+			"GatewaySubnet_cidr":  "172.28.28.0/28",		  
+			"FirewallSubnet_cidr": "172.28.28.16/28"
+		},
+		{
+			"vnet_name": "cl_servicio_nat",
+			"vnet_cidr": "172.28.28.32/27",
+			"GatewaySubnet_cidr":  "172.28.28.32/28",		  
+			"FirewallSubnet_cidr": "172.28.28.48/28"
+		},
+		{
+			"vnet_name": "co_servicio_nat",
+			"vnet_cidr": "172.28.28.64/27",
+			"GatewaySubnet_cidr":  "172.28.28.64/28",		  
+			"FirewallSubnet_cidr": "172.28.28.80/28"
+		},
+		{
+			"vnet_name": "br_servicio_nat",
+			"vnet_cidr": "172.28.28.96/27",
+			"GatewaySubnet_cidr":  "172.28.28.96/28",		  
+			"FirewallSubnet_cidr": "172.28.28.112/28"
+		}
+	]
+}
