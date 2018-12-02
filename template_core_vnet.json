@@ -67,5 +67,11 @@
             },
             "dependsOn": []
         }
-    ]
+    ],
+	"outputs": {
+		"vnetResourceID": {
+			"type": "string",
+			"value": "[resourceId('Microsoft.Network/virtualNetworks', parameters('vnet_name'))]"
+		}
+	}
 }
