@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vmssName": {
-            "value": "vmsssergio3"
+            "value": "vmsssergio"
         },
         "instanceCount": {
             "value": 4
