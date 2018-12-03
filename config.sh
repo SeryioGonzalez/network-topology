@@ -19,3 +19,8 @@ natSpokeVnetTemplateFile="template_nat_spoke_vnet.json"
 
 vmssTemplate="template_vmss.json"
 vmssParameters="parameters_vmss.json"
+
+telefonicaVnetRG="RG-VP-PRE-NET-01"
+telefonicaVnet="VNET-VP-PRE-NET-01"
+
+source credentials.sh

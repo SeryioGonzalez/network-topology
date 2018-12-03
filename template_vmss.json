@@ -3,6 +3,8 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
 	"vnetId":         {"type": "string" },
+	"subnetName_1":   {"type": "string" },
+	"subnetName_2":   {"type": "string" },
     "vmSku": {
       "type": "string",
       "defaultValue": "Standard_D1_v2"
@@ -51,8 +53,6 @@
     "natPoolName_2": "[concat(parameters('vmssName'), 'natPool_2')]",
     "nicName_1": "[concat(parameters('vmssName'), 'nic_1')]",
     "nicName_2": "[concat(parameters('vmssName'), 'nic_2')]",
-    "subnetName_1": "core_subnet_servicio",
-    "subnetName_2": "core_subnet_gestion",
     "ipConfigName_1":  "[concat(parameters('vmssName'), 'ipconfig_1')]",
     "ipConfigName_2":  "[concat(parameters('vmssName'), 'ipconfig_2')]"
 
@@ -225,7 +225,7 @@
                       "name": "[variables('ipConfigName_1')]",
                       "properties": {
                         "subnet": {
-                          "id": "[concat(parameters('vnetId'), '/subnets/', variables('subnetName_1')) ]"                       
+                          "id": "[concat(parameters('vnetId'), '/subnets/', parameters('subnetName_1')) ]"                       
 						},
                         "publicipaddressconfiguration": {
                           "name": "pub1",
@@ -257,7 +257,7 @@
                       "name": "[variables('ipConfigName_2')]",
                       "properties": {
                         "subnet": {
-                          "id": "[concat(parameters('vnetId'), '/subnets/', variables('subnetName_2')) ]"                       
+                          "id": "[concat(parameters('vnetId'), '/subnets/', parameters('subnetName_2')) ]"                       
 						},
                         "publicipaddressconfiguration": {
                           "name": "pub2",
